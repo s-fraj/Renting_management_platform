@@ -1,0 +1,121 @@
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background: #ffffff;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+  box-shadow: 0 1px 8px rgba(15, 23, 42, 0.08);
+}
+
+.navbar-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: min(100%, 1100px);
+  margin: 0 auto;
+  padding: 1rem 1.5rem;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.brand {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #1d4ed8;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-link,
+.nav-text {
+  color: #475569;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-text:hover,
+.primary-button:hover {
+  color: #1d4ed8;
+}
+
+.nav-link.active {
+  color: #1d4ed8;
+  border-bottom: 2px solid #1d4ed8;
+  padding-bottom: 0.1rem;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.primary-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #1d4ed8;
+  color: #ffffff;
+  padding: 0.65rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.primary-button:active {
+  transform: scale(0.97);
+}
+
+.profile-image {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 9999px;
+  border: 2px solid #ffffff;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.12);
+  object-fit: cover;
+}
+
+.login-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.1);
+  color: #1d4ed8;
+  border: 1px solid rgba(29, 78, 216, 0.2);
+  border-radius: 9999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.login-link:hover {
+  background: rgba(29, 78, 216, 0.1);
+  border-color: rgba(29, 78, 216, 0.4);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(29, 78, 216, 0.15);
+}
+
+@media (max-width: 768px) {
+  .navbar-content {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .nav-links {
+    display: none;
+  }
+}
